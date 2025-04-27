@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flash - The AI Document Editor",
+  title: "Aero - The AI Document Editor",
   description:
-    "Turn your ideas into professional document in seconds with Flash AI.",
+    "Turn your ideas into professional document in seconds with Aero AI.",
 };
 
 export default function RootLayout({
