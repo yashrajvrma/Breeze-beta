@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -51,7 +53,7 @@ export default function Hero() {
       });
 
       if (response.data.message === "success") {
-        toast.success(`You&apos;ve successfully joined the waitlist.`);
+        toast.success("You've successfully joined the waitlist.");
       }
 
       setIsRegistered(true);
@@ -59,7 +61,7 @@ export default function Hero() {
       await fetchSignupCount();
     } catch (error) {
       console.error(`Error while joining waitlist ${error}`);
-      toast.error(`Something went wrong, Please try again.`);
+      toast.error("Something went wrong, Please try again.");
     } finally {
       setIsSubmitting(false);
     }
