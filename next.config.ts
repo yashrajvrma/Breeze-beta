@@ -1,9 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ["prisma", "../node_modules/generated"],
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

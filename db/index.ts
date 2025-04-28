@@ -1,8 +1,8 @@
-import { PrismaClient } from "../node_modules/generated";
+import { PrismaClient } from "../lib/generated/prisma";
 
 const prismaClientSingleton = () => {
   return new PrismaClient();
-};
+};1
 
 type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
 
