@@ -1,11 +1,11 @@
 "use client";
 
-export const GitHub = ({ className }: { className?: string }) => (
+export const GitHub = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-5 h-5"
+    {...props}
   >
     <title>GitHub</title>
     <path
@@ -16,12 +16,12 @@ export const GitHub = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Twitter = ({ className }: { className?: string }) => (
+export const Twitter = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-5 h-5"
+    {...props}
   >
     <title>X (Twitter)</title>
     <path
@@ -32,12 +32,12 @@ export const Twitter = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Linkedin = ({ className }: { className?: string }) => (
+export const Linkedin = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 529.6 529.6"
-    className="w-5 h-5"
+    {...props}
   >
     <title>Linkedin</title>
     <path

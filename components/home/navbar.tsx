@@ -1,10 +1,9 @@
 "use client";
 
-import { useRef } from "react";
 import { Button } from "../ui/button";
 import logo from "../../public/assets/images/aero-icon.png";
 import Image from "next/image";
-import { toast } from "sonner"; // Import the toast function
+import { toast } from "sonner";
 
 export default function Navbar() {
   const handleGetStartedClick = () => {

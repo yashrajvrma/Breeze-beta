@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       data: { email },
     });
 
-    return NextResponse.json({ message: "Success" }, { status: 201 });
+    return NextResponse.json({ message: "success" }, { status: 200 });
   } catch (error) {
     console.error("[EARLY ACCESS ERROR]", error);
     return NextResponse.json(

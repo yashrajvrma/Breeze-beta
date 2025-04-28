@@ -1,7 +1,6 @@
 "use client";
 
 import { Twitter, Linkedin, GitHub } from "@/components/icons/icons";
-// import { Github } from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
@@ -28,7 +27,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <div className="flex justify-center sm:pt-0 pt-12 pb-20 text-white font-sans px-12">
-      <div className="flex flex-row justify-between items-center w-[400]">
+      <div className="flex flex-row justify-between items-center w-[400px]">
         <div className="flex justify-center items-center sm:gap-x-4 gap-x-3">
           {socialLinks.map((social) => (
             <Link

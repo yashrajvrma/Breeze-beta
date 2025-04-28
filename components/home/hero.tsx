@@ -27,7 +27,7 @@ export default function Hero() {
       const response = await axios.get("/api/auth/early-access/count");
       setSignupCount(response.data.data);
     } catch (error) {
-      console.error("Failed to fetch signup count:", error);
+      console.error(`Failed to fetch registered people: ${error}`);
     }
   };
 
@@ -37,6 +37,7 @@ export default function Hero() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
+
     try {
       const response = await axios.post("/api/auth/early-access", {
         email: data.email,
@@ -49,17 +50,16 @@ export default function Hero() {
         angle: 270,
       });
 
-      toast.success("You've successfully joined the waitlist!");
+      if (response.data.message === "success") {
+        toast.success(`You&apos;ve successfully joined the waitlist.`);
+      }
 
-      setIsRegistered(true); // success, show success message
-      reset(); // clear form
-      await fetchSignupCount(); // fetch updated count
-    } catch (error: any) {
-      console.error("Form submission error:", error);
-      toast.error(
-        error?.response?.data?.error ||
-          "Something went wrong. Please try again."
-      );
+      setIsRegistered(true);
+      reset();
+      await fetchSignupCount();
+    } catch (error) {
+      console.error(`Error while joining waitlist ${error}`);
+      toast.error(`Something went wrong, Please try again.`);
     } finally {
       setIsSubmitting(false);
     }
@@ -82,7 +82,6 @@ export default function Hero() {
           className="flex justify-center items-center sm:gap-x-4 gap-x-2 sm:pt-8 pt-5 w-full max-w-md px-3"
         >
           <Input
-            // Attach the ref to the input
             type="email"
             placeholder="you@example.com"
             className="py-3 sm:text-md text-sm"
@@ -93,17 +92,16 @@ export default function Hero() {
             className="sm:text-base text-sm hover:cursor-pointer"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Joining..." : "Join Waitlist"}
+            Join waitlist
           </ButtonColorful>
         </form>
       ) : (
         <div className="text-center sm:pt-8 pt-5 max-w-md px-3">
           <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-            You're on the list! 🎉
+            You&apos;re on the list! 🎉
           </h3>
           <p className="text-sm sm:text-base text-neutral-400">
-            We'll let you know when we're ready to revolutionize your email
-            experience.
+            We&apos;ll let you know when we&apos;re ready to ship the product.
           </p>
         </div>
       )}
