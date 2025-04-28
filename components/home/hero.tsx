@@ -10,7 +10,7 @@ import {
 import { useForm } from "react-hook-form";
 import { AnimatedNumber } from "../ui/animated-number";
 import { ButtonColorful } from "../ui/button-colorful";
-import { Input } from "../ui/input"; // Import the ShadCN Input component
+import { Input } from "../ui/input";
 import Image from "next/image";
 import HeroImg from "../../public/assets/images/hero-img-3.png";
 import axios from "axios";
@@ -23,7 +23,7 @@ type FormData = {
 
 // Forward the ref to the component
 const Hero = forwardRef((props, ref) => {
-  const [signupCount, setSignupCount] = useState<number>(1000);
+  const [signupCount, setSignupCount] = useState<number>(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
 
