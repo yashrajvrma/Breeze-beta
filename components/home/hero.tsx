@@ -59,9 +59,9 @@ export default function Hero() {
       setIsRegistered(true);
       reset();
       await fetchSignupCount();
-    } catch (error) {
+    } catch (error: any) {
       console.error(`Error while joining waitlist ${error}`);
-      toast.error("Something went wrong, Please try again.");
+      toast.error(`${error.response.data.error}`);
     } finally {
       setIsSubmitting(false);
     }
