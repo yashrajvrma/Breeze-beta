@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-  useRef,
-  forwardRef,
-  useImperativeHandle,
-} from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatedNumber } from "../ui/animated-number";
 import { ButtonColorful } from "../ui/button-colorful";
@@ -15,14 +9,13 @@ import Image from "next/image";
 import HeroImg from "../../public/assets/images/hero-img-3.png";
 import axios from "axios";
 import { toast } from "sonner";
-import confetti from "canvas-confetti"; // Make sure it's installed
+import confetti from "canvas-confetti";
 
 type FormData = {
   email: string;
 };
 
-// Forward the ref to the component
-const Hero = forwardRef((props, ref) => {
+export default function Hero() {
   const [signupCount, setSignupCount] = useState<number>(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isRegistered, setIsRegistered] = useState(false);
@@ -141,8 +134,4 @@ const Hero = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
-
-Hero.displayName = "Hero"; // This is important when using forwardRef with displayName
-
-export default Hero;
+}

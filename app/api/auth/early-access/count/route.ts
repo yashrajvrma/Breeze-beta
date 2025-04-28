@@ -6,7 +6,7 @@ export async function GET() {
     const count = await prisma.user.count();
     return NextResponse.json({ data: count }, { status: 200 });
   } catch (error) {
-    console.error("Sorry something went wrong");
+    console.error("Sorry something went wrong", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
