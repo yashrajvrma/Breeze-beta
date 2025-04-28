@@ -27,9 +27,9 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <div className="flex justify-center pt-16 pb-10 text-white font-sans">
+    <div className="flex justify-center sm:pt-0 pt-12 pb-20 text-white font-sans px-12">
       <div className="flex flex-row justify-between items-center w-[400]">
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center sm:gap-x-4 gap-x-3">
           {socialLinks.map((social) => (
             <Link
               key={social.name}
@@ -43,7 +43,7 @@ export default function Footer() {
             </Link>
           ))}
         </div>
-        <div className="text-neutral-400 sm:text-md text-sm">
+        <div className="text-neutral-400 sm:text-base text-sm">
           Made by Yashraj Verma
         </div>
       </div>
