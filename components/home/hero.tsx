@@ -40,7 +40,7 @@ export default function Hero() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex justify-center items-center sm:gap-x-4 gap-x-2 pt-8 w-full max-w-md px-3"
+        className="flex justify-center items-center sm:gap-x-4 gap-x-2 sm:pt-8 pt-5 w-full max-w-md px-3"
       >
         <Input
           type="email"
@@ -50,7 +50,10 @@ export default function Hero() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <ButtonColorful type="submit" className="hover:cursor-pointer" />
+        <ButtonColorful
+          type="submit"
+          className="sm:text-base text-sm hover:cursor-pointer"
+        />
       </form>
 
       <div className="flex sm:mt-6 mt-4">
