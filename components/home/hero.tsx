@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -9,6 +7,7 @@ import { ButtonColorful } from "../ui/button-colorful";
 import { Input } from "../ui/input";
 import Image from "next/image";
 import HeroImg from "../../public/assets/images/hero-img-3.png";
+import { AxiosError } from "axios";
 import axios from "axios";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
@@ -59,9 +58,13 @@ export default function Hero() {
       setIsRegistered(true);
       reset();
       await fetchSignupCount();
-    } catch (error: any) {
-      console.error(`Error while joining waitlist ${error}`);
-      toast.error(`${error.response.data.error}`);
+    } catch (error: unknown) {
+      if (error instanceof AxiosError) {
+        toast.error(error.response?.data?.error || "Something went wrong");
+      } else {
+        toast.error("Something went wrong");
+      }
+      console.error(`Error while joining waitlist`, error);
     } finally {
       setIsSubmitting(false);
     }
