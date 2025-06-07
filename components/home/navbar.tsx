@@ -14,7 +14,7 @@ export default function Navbar() {
     <div className="flex flex-row justify-between items-center font-sans sm:px-10 sm:py-5 px-5 py-8">
       <div className="flex flex-row justify-between items-center sm:gap-x-4 gap-x-3">
         <Image src={logo} alt="Logo" width={32} placeholder="blur" priority />
-        <div className="logo-name text-xl text-white">Aero</div>
+        <div className="logo-name text-xl text-white">Breeze</div>
       </div>
       <Button
         onClick={handleGetStartedClick}

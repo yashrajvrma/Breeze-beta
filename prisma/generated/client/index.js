@@ -122,7 +122,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Courses\\Private\\Aeroai - landing page\\aero ai\\prisma\\generated\\client",
+      "value": "C:\\Courses\\Private\\Breezeai - landing page\\breeze ai\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -140,7 +140,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Courses\\Private\\Aeroai - landing page\\aero ai\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Courses\\Private\\Breezeai - landing page\\breeze ai\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aero - The AI Document Editor",
+  title: "Breeze - The AI Document Editor",
   description:
-    "Turn your ideas into professional document in seconds with Aero AI.",
+    "Turn your ideas into professional document in seconds with Breeze AI.",
 };
 
 export default function RootLayout({

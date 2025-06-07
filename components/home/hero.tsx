@@ -77,7 +77,8 @@ export default function Hero() {
           The AI <span className="italic font-semibold">Document</span> Editor
         </div>
         <p className="text-base sm:text-xl text-center font-normal text-neutral-400 pt-4 tracking-tight px-3">
-          Aero turns your ideas into professional documents in seconds with AI.
+          Breeze turns your ideas into professional documents in seconds with
+          AI.
         </p>
       </div>
 
