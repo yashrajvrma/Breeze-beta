@@ -6,7 +6,7 @@ import { AnimatedNumber } from "../ui/animated-number";
 import { ButtonColorful } from "../ui/button-colorful";
 import { Input } from "../ui/input";
 import Image from "next/image";
-import HeroImg from "../../public/assets/images/hero-img-3.png";
+import HeroImg from "../../public/assets/images/new.png";
 import { AxiosError } from "axios";
 import axios from "axios";
 import { toast } from "sonner";
@@ -74,9 +74,13 @@ export default function Hero() {
     <div className="flex flex-col justify-center items-center text-white font-sans sm:px-20">
       <div className="flex flex-col justify-center items-center w-full">
         <div className="text-4xl sm:text-7xl text-center font-semibold tracking-tighter sm:mt-20 mt-16">
-          The AI <span className="italic font-semibold">Document</span> Editor
+          The AI{" "}
+          <span className="italic tracking-tighter font-semibold">
+            Document
+          </span>{" "}
+          Editor
         </div>
-        <p className="text-base sm:text-xl text-center font-normal text-neutral-400 pt-4 tracking-tight px-3">
+        <p className="text-base sm:text-lg text-center font-normal text-neutral-400 pt-1 tracking-tight px-3 font-sans">
           Breeze turns your ideas into professional documents in seconds with
           AI.
         </p>
@@ -127,7 +131,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full max-w-8xl sm:mt-0 mt-3">
+      <div className="w-full max-w-8xl sm:mt-10 mt-3 sm:mb-5">
         <Image
           src={HeroImg}
           alt="hero image"
