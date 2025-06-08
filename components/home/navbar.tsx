@@ -23,7 +23,6 @@ export default function Navbar() {
           />
         </div>
         <div
-{/*           style={{ fontFamily: "var(--font-garamond-book)" }}  */}
           className="flex items-center font-sans tracking-tighter align-middle sm:text-3xl text-2xl text-stone-50"
         >
           Breeze
