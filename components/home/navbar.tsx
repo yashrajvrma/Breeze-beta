@@ -12,19 +12,19 @@ export default function Navbar() {
 
   return (
     <div className="flex flex-row justify-between items-center font-sans sm:px-10 sm:py-5 px-5 py-8">
-      <div className="flex flex-row justify-between items-center sm:gap-x-2.5 gap-x-3">
-        <div className="flex justify-center items-center align-middle rounded-lg bg-neutral-100 p-1">
+      <div className="flex justify-center items-center sm:gap-x-2 gap-x-2">
+        <div className="flex items-center rounded-lg bg-neutral-100 p-1">
           <Image
             src={logo}
             alt="Logo"
-            width={24}
-            height={24}
+            width={28}
+            height={28}
             placeholder="blur"
           />
         </div>
         <div
           style={{ fontFamily: "var(--font-garamond-book)" }}
-          className="logo-name text-4xl text-white "
+          className="flex items-center align-middle sm:text-4xl text-3xl text-stone-50 tracking-tight"
         >
           Breeze
         </div>

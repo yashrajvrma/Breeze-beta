@@ -71,16 +71,15 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-white font-sans sm:px-20">
-      <div className="flex flex-col justify-center items-center w-full">
-        <div className="text-4xl sm:text-7xl text-center font-semibold tracking-tighter sm:mt-20 mt-16">
-          The AI{" "}
-          <span className="italic tracking-tighter font-semibold">
-            Document
-          </span>{" "}
-          Editor
+    <div className="flex flex-col justify-center items-center text-neutral-50 font-sans">
+      <div className="flex flex-col justify-center items-center w-full ">
+        <div className="text-5xl sm:text-7xl font-medium tracking-tighter sm:mt-20 mt-8 text-stone-100">
+          AI Powered
         </div>
-        <p className="text-base sm:text-lg text-center font-normal text-neutral-400 pt-1 tracking-tight px-3 font-sans">
+        <div className="text-5xl text-stone-200 sm:text-7xl font-medium tracking-tighter">
+          Document Editor
+        </div>
+        <p className="sm:text-xl text-sm text-center font-normal text-stone-500 pt-2 font-sans sm:px-0 px-10">
           Breeze turns your ideas into professional documents in seconds with
           AI.
         </p>
@@ -116,7 +115,7 @@ export default function Hero() {
         </div>
       )}
 
-      <div className="flex sm:mt-6 mt-4">
+      <div className="flex sm:mt-6 mt-3 mb-2">
         <div className="flex flex-wrap justify-center items-center gap-x-1 text-neutral-400 font-medium text-sm sm:text-base text-center max-w-xs sm:max-w-none mx-auto leading-tight">
           <span className="font-semibold text-neutral-100 text-sm sm:text-base">
             <AnimatedNumber
@@ -131,7 +130,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-full max-w-8xl sm:mt-10 mt-3 sm:mb-5">
+      <div className="w-full max-w-8xl sm:mt-10 mt-3 sm:mb-5 px-2 sm:px-10">
         <Image
           src={HeroImg}
           alt="hero image"
